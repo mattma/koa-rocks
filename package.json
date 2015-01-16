@@ -2,7 +2,7 @@
   "name": "koa-rocks",
   "description": "Koa.js powered minimalist Node.js http server framework",
   "version": "0.0.0",
-  "homepage": "https://github.com/mattma/ember-rocks",
+  "homepage": "https://github.com/mattma/koa-rocks",
   "author": {
     "name": "Matt Ma",
     "email": "matt@mattmadesign.com",
