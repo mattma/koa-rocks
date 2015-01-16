@@ -1,13 +1,26 @@
 {
-  "name": "Koa_Rocks",
+  "name": "koa-rocks",
   "description": "Koa.js powered minimalist Node.js http server framework",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mattma/ember-rocks",
   "author": {
     "name": "Matt Ma",
-    "email": "matt@mattmadesign.com"
+    "email": "matt@mattmadesign.com",
+    "url": "http://mattmadesign.com"
   },
-  "version": "0.0.0",
-  "private": true,
-  "repository": "https://github.com/mattma/koa-rocks",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattma/koa-rocks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattma/koa-rocks/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mattma/koa-rocks/blob/master/LICENSE.md"
+    }
+  ],
   "main": "./server/index",
   "scripts": {
     "start": "node server"
@@ -27,5 +40,7 @@
     "node": ">= 0.11.14",
     "iojs": ">= 1"
   },
-  "license": ""
+  "keywords": [
+
+  ]
 }
