@@ -1,0 +1,53 @@
+{
+  // http://jshint.com/docs/options/
+  // in flavor of emberjs jshint standard
+  "esnext": true,
+  "node": true,
+  "browser": true,
+  "boss": true,
+  "curly": true,
+  "debug": false,
+  "devel": true,
+  "eqeqeq": true,
+  "evil": true,
+  "forin": false,
+  "immed": true,
+  // suppresses most of the warnings about possibly unsafe line breakings
+  "laxbreak": false,
+  "newcap": true,
+  "noarg": true,
+  "noempty": false,
+  "nonew": false,
+  "nomen": false,
+  "onevar": false,
+  "plusplus": false,
+  "regexp": false,
+  "undef": true,
+  "sub": true,
+  "strict": false,
+  "white": false,
+  "eqnull": true,
+  "trailing": true,
+  "unused": "vars",
+  // my custom prefer flavor
+  "bitwise": true,
+  "camelcase": false,
+  "indent": 2,
+  // optional using single or double quote
+  // "quotmark": "single",
+  "smarttabs": true,
+  "maxdepth": 4,
+  "maxlen": 100,
+  // suppresses warnings about comma-first coding style
+  "laxcomma": true,
+  "predef": [
+    "console",
+    // mocha test framework globals
+    "describe",
+    "it",
+    "before",
+    "after",
+    "beforeEach",
+    "afterEach"
+  ]
+}

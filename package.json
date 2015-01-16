@@ -1,0 +1,31 @@
+{
+  "name": "Koa_Rocks",
+  "description": "Koa.js powered minimalist Node.js http server framework",
+  "author": {
+    "name": "Matt Ma",
+    "email": "matt@mattmadesign.com"
+  },
+  "version": "0.0.0",
+  "private": true,
+  "repository": "https://github.com/mattma/koa-rocks",
+  "main": "./server/index",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "co-body": "^1.0.0",
+    "koa": "^0.14.0",
+    "koa-hbs": "^0.6.0",
+    "koa-logger": "^1.2.2",
+    "koa-route": "^2.4.0",
+    "koa-static": "^1.4.8"
+  },
+  "devDependencies": {
+    "debug": "^2.1.0"
+  },
+  "engines": {
+    "node": ">= 0.11.14",
+    "iojs": ">= 1"
+  },
+  "license": ""
+}
