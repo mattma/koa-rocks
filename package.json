@@ -1,7 +1,7 @@
 {
   "name": "koa-rocks",
   "description": "Koa.js powered minimalist Node.js http server framework",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/mattma/koa-rocks",
   "author": {
     "name": "Matt Ma",
