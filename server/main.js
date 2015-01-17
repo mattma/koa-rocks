@@ -1,22 +1,48 @@
 var koa = require('koa');
 var logger = require('koa-logger');
+var responseTime = require('koa-response-time');
+var compress = require('koa-compress');
 
-var hbs = require('./middlewares/view-hbs');
-var serve = require('./middlewares/serve-public');
+var hbs = require('./middleware/view-hbs');
+var serve = require('./middleware/serve-public');
 var routes = require('./routes');
 
-var app = koa();
+/**
+ * Initialize an app with the given `opts`.
+ *
+ * @param {Object} opts
+ * @return {Application}
+ * @api public
+ */
+module.exports = function main (opts) {
+  opts = opts || {};
+  var app = koa();
 
-module.exports = function main (options) {
-  app.use(logger());
+  // Middleware starts
 
-  // Setup views, use extension ".hbs"
+  // logging
+  if (opts.env !== 'test') {
+    app.use(logger());
+  }
+
+  // x-response-time
+  app.use(responseTime());
+
+  // compression
+  app.use(compress());
+
+  // setup views, use extension ".hbs"
   app.use(hbs());
+
+  // serve static files, ex: js, css, images, etc
   app.use(serve());
 
   // load up all possible routes
-  routes(app, options);
+  routes(app, opts);
 
-  app.listen(options.port);
-  console.log('Starting web server on port ' + options.port + ' in ' + options.env + ' mode');
+  // kick start web server
+  app.listen(opts.port);
+  console.log('Starting web server on port %s in %s mode', opts.port, opts.env);
+
+  return app;
 };
