@@ -6,7 +6,7 @@ var path = require('path');
 var read = function (filePath) {
   return function (cb) {
     fs.readFile(filePath, cb);
-  }
+  };
 };
 
 module.exports = function *dummyRoute () {

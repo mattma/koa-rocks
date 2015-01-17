@@ -9,5 +9,5 @@ module.exports = function () {
       return;
     }
     this.throw(404);
-  }
+  };
 };

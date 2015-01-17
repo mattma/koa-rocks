@@ -40,6 +40,8 @@
   "maxlen": 100,
   // suppresses warnings about comma-first coding style
   "laxcomma": true,
+  // newly discovered
+  "noyield": true,
   "predef": [
     "console",
     // mocha test framework globals
