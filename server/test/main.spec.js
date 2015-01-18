@@ -15,6 +15,15 @@ describe('Main module', function () {
   it('should kick start the web server', function *() {
     agent
       .get('/')
+      .expect('Content-Type', 'text/html')
+      .expect(200)
+      .end();
+  });
+
+  it('should default to base view when the view is not existed', function *() {
+    agent
+      .get('/not-found-view')
+      .expect('Content-Type', 'text/html')
       .expect(200)
       .end();
   });

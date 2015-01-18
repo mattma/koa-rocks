@@ -1,3 +1,4 @@
+// enable `it` as generator functions
 require('co-mocha');
 
 var app = require('../../main');

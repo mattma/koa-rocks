@@ -4,7 +4,7 @@ var request = require('../../helper/entrypoint').request;
 describe('User module', function () {
   var agent;
 
-  before(function *() {
+  before(function () {
     agent = request.agent(server.listen());
   });
 
