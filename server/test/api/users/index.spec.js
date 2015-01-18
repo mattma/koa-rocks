@@ -14,6 +14,7 @@ describe('User module', function () {
 
   it('GET /api/users', function *() {
     var users = yield agent.get('/api/users').expect(200).end();
-    console.log('users: ', users.text);
+    var data = JSON.parse(users.text);
+    data.should.have.keys(['users', 'others']);
   });
 });

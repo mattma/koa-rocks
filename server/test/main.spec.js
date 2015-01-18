@@ -13,10 +13,9 @@ describe('Main module', function () {
   });
 
   it('should kick start the web server', function *() {
-    var res = yield agent
+    agent
       .get('/')
       .expect(200)
       .end();
-    console.log('res: ', res.body);
   });
 });
