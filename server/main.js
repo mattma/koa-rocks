@@ -40,8 +40,8 @@ module.exports = function main (opts) {
   // load up all possible routes
   routes(app, opts);
 
-  // kick start web server
-  app.listen(opts.port);
+  // kick start web server, enable `app.server.close()` to shut down
+  app.server = app.listen(opts.port);
   console.log('Starting web server on port %s in %s mode', opts.port, opts.env);
 
   return app;
