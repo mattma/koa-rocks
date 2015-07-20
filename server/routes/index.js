@@ -1,18 +1,23 @@
+'use strict';
+
 // Entry point of all routes
-var route = require('koa-router');
-// var parse = require('co-body');
+let Router = require('koa-router');
 
-var rootRoute = require('./root');
-var fakeUsersRoute = require('./api/mock-users');
+let currentAPI = new Router({
+  prefix: `/api/v1`
+});
 
-module.exports = function routes (app, options) {
+module.exports = function routes (app, opts) {
+  let v1 = require('./v1');
+  let rootRoute = require('./root');
+
   // add HTTP methods to app object properties
-  app.use(route(app));
 
-  // Need to be deleted in development
-  // GET mocks data from /server/routes/mocks/people.json
-  app.get('/api/:query', fakeUsersRoute);
+  // "/api/*": an API end point, interact with db
+  v1(currentAPI, opts);
 
   // root route to loads view templates
-  app.get('(.*)', rootRoute(options));
+  rootRoute(currentAPI, opts);
+
+  app.use(currentAPI.routes());
 };

@@ -23,21 +23,21 @@
   ],
   "main": "./server/index",
   "scripts": {
-    "start": "node server",
+    "start": "node --harmony_arrow_functions server",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --require should --reporter spec --bail --harmony server/test/**/*.spec.js"
   },
   "dependencies": {
-    "co-body": "^1.0.0",
-    "debug": "^2.1.0",
-    "koa": "^0.14.0",
+    "co-body": "^2.0.0",
+    "koa": "^0.21.0",
     "koa-compress": "^1.0.8",
     "koa-hbs": "^0.6.0",
     "koa-logger": "^1.2.2",
     "koa-response-time": "^1.0.2",
-    "koa-router": "^3.8.0",
+    "koa-router": "^5.1.2",
     "koa-static": "^1.4.8"
   },
   "devDependencies": {
+    "debug": "^2.1.0",
     "co-mocha": "^1.1.0",
     "co-supertest": "0.0.7",
     "gulp": "^3.8.10",
