@@ -28,13 +28,14 @@
   },
   "dependencies": {
     "co-body": "^2.0.0",
+    "co-views": "^1.0.0",
     "koa": "^0.21.0",
     "koa-compress": "^1.0.8",
-    "koa-hbs": "^0.6.0",
     "koa-logger": "^1.2.2",
     "koa-response-time": "^1.0.2",
     "koa-router": "^5.1.2",
-    "koa-static": "^1.4.8"
+    "koa-static": "^1.4.8",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "debug": "^2.1.0",

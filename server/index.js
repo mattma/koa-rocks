@@ -4,8 +4,7 @@ var env = process.env.NODE_ENV || 'development';
 var port = process.env.port || 3001;
 var options = {
   port:       port,
-  env:        env,
-  liveReload: false
+  env:        env
 };
 
 // bootstrap the application

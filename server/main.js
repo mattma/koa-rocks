@@ -3,7 +3,6 @@ var logger = require('koa-logger');
 var responseTime = require('koa-response-time');
 var compress = require('koa-compress');
 
-var hbs = require('./middleware/view-hbs');
 var serve = require('./middleware/serve-public');
 var routes = require('./routes');
 
@@ -30,9 +29,6 @@ module.exports = function main (opts) {
 
   // compression
   app.use(compress());
-
-  // setup views, use extension ".hbs"
-  app.use(hbs());
 
   // serve static files, ex: js, css, images, etc
   app.use(serve());
